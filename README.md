@@ -49,8 +49,8 @@ streamlit run chat.py
 ```
 
 
-5. Estrutura do projeto
-
+5. **Estrutura do projeto**
+```
 📁 Agentes_IA_zero_deploy
 ├── app.py                 # API Flask para processar perguntas
 ├── chat.py                # Interface de chat com Streamlit
@@ -60,3 +60,4 @@ streamlit run chat.py
 ├── config.yaml            # Configurações (chaves, paths, etc.)
 ├── requirements.txt       # Lista de dependências
 └── README.md              # Este arquivo
+```
