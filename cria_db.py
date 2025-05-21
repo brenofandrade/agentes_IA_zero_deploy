@@ -2,6 +2,17 @@ import sqlite3
 
 
 DB_NAME = "atendimentos.db"
+table_name = 'atendimentos'
+
+
+def delete_database():
+    """Deleta o database"""
+
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+    cursor.execute('''DROP TABLE atendimentos''')
+    conn.commit()
+    conn.close()
 
 def create_database():
     """Cria o banco de dados SQLite e a tabela de atendimentos."""
@@ -42,8 +53,12 @@ def insert_sample_data():
     
     conn.commit()
     conn.close()
-    
-if __name__ == "__main__":
+
+def run():
+    delete_database()
     create_database()
     insert_sample_data()
     print("Banco de dados e registros de atendimentos criados com sucesso!")
+    
+if __name__ == "__main__":
+    run()
